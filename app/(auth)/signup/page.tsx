@@ -10,6 +10,7 @@ import { useState } from "react";
 import { z } from "zod";
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from "react-hook-form"
+import { useRouter } from "next/navigation";
 
 const FormSchema = z
   .object({
@@ -23,6 +24,7 @@ const FormSchema = z
   });
 
 export default function SignUp() {
+  const [errorM, setErrorM] = useState<string>('');
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -34,27 +36,37 @@ export default function SignUp() {
     },
   });
 
-  const onSubmit = async (values: z.infer<typeof FormSchema>) => {
-    console.log('run onsubmit')
-    console.log(values)
-    // const response = await fetch('/api/user', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify({
-    //     name: values.username,
-    //     email: values.email,
-    //     password: values.password,
-    //   }),
-    // });
+  const router = useRouter()
 
-    // console.log(response);
-    // if (response.ok) {
-    //   router.push('/sign-in');
-    // } else {
-    //   console.error('An error occurred');
-    // }
+  const onSubmit = async (values: z.infer<typeof FormSchema>) => {
+
+    // console.log(values)
+    const response = await fetch('/api/user', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify({
+        name: values.name,
+        email: values.email,
+        password: values.password,
+      }),
+    });
+
+    const jsonResponse = await response.json();
+    console.log(jsonResponse)
+
+    if (jsonResponse.user) {
+      router.push('/signin');
+    } else {
+      setErrorM(jsonResponse?.message)
+      setTimeout(() => {
+        setErrorM('')
+      }, 5000);
+      // console.error('An error occurred');
+
+    }
 
   };
 
@@ -163,6 +175,11 @@ export default function SignUp() {
                   {form.formState.errors.password?.message}
                 </label>
               </div>
+            </div>
+
+            <div className={`${errorM === '' ? 'hidden' : ''} mt-6 space-y-5 text-center py-4 w-full rounded bg-red-600 text-white`}
+            >
+              {errorM}
             </div>
 
             {/* <div className="mt-6 space-y-5"> */}

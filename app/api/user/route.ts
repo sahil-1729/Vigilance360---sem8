@@ -10,13 +10,13 @@ const FormSchema = z.object({
     .string()
     .min(1, "Password is required")
     .min(8, "Password must have than 8 characters"),
-  company: z.string().min(1, "Company is required").max(100),
+  // company: z.string().min(1, "Company is required").max(100),
 });
 
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-
+    console.log(body);
     const { name, email, password } = FormSchema.parse(body);
 
     console.log(name, email, password);
