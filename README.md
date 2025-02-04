@@ -1,4 +1,4 @@
-# Vigilance 360
+<!-- # Vigilance 360
 
 ## Features
 
@@ -58,14 +58,10 @@ vigilance-360/
 └── yarn.lock
 ```
 
-## Contributing
-
-We welcome contributions to Vigilance 360! Please read our [contributing guidelines](CONTRIBUTING.md) to get started.
-
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
-For any questions or feedback, please open an issue on the [GitHub repository](https://github.com/yourusername/vigilance-360).
+For any questions or feedback, please open an issue on the [GitHub repository](https://github.com/yourusername/vigilance-360). -->
