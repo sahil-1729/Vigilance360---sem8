@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://H%3A/GIT%20CLONE/VIGILANCE%20360/open-react-template/app/dashboard/layout.tsx"],"sourcesContent":["\r\nexport default function AuthLayout({\r\n    children,\r\n}: {\r\n    children: React.ReactNode;\r\n}) {\r\n    return (\r\n        <main className=\"relative flex grow flex-col\">\r\n\r\n            {children}\r\n        </main>\r\n    );\r\n}\r\n"],"names":[],"mappings":";;;;;AACe,SAAS,WAAW,EAC/B,QAAQ,EAGX;IACG,qBACI,8OAAC;QAAK,WAAU;kBAEX;;;;;;AAGb"}},
-    {"offset": {"line": 22, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}
