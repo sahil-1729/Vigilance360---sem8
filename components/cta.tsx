@@ -33,7 +33,7 @@ export default function Cta() {
                 >
                   <span className="relative inline-flex items-center">
                     {/* Start Building */}
-                    Schedule Demo
+                    Get started
                     <span className="ml-1 tracking-normal text-white/50 transition-transform group-hover:translate-x-0.5">
                       -&gt;
                     </span>

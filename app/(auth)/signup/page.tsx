@@ -60,11 +60,12 @@ export default function SignUp() {
     if (jsonResponse.user) {
       router.push('/signin');
     } else {
+      console.log(jsonResponse?.message)
       setErrorM(jsonResponse?.message)
       setTimeout(() => {
         setErrorM('')
       }, 5000);
-      // console.error('An error occurred');
+      console.error('An error occurred');
 
     }
 

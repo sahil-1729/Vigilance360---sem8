@@ -17,6 +17,10 @@ export default function Header() {
           {/* Site branding */}
           <div className="flex flex-1 items-center">
             <Logo />
+            <span>
+              &nbsp;
+              Vigilance 360
+            </span>
           </div>
 
 

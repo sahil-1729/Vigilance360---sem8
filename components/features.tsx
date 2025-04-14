@@ -44,9 +44,6 @@ export default function Features() {
               Built for Modern Security Teams
             </h2>
             <p className="text-lg text-indigo-200/65">
-              {/* Open AI reads and understands your files, and with nothing more
-              than a single line of feedback, so you can go further than the
-              speed of thought. */}
               Vigilance 360 leverages AI to analyze video feeds,
               transaction data, and communication logs,
               providing actionable insights to help you stay ahead of threats.
@@ -83,9 +80,10 @@ export default function Features() {
               <p className="text-indigo-200/65">
                 {/* Track progress across custom flows for your team. Find the right
                 balance for the user, privacy and security. */}
-                Monitor live video feeds and receive instant alerts for suspicious activities, ensuring proactive crime prevention.
+                Monitor video feeds and receive instant alerts for suspicious activities, ensuring proactive crime prevention.
               </p>
             </article>
+
             <article>
               <svg
                 className="mb-3 fill-indigo-500"
@@ -103,32 +101,10 @@ export default function Features() {
               <p className="text-indigo-200/65">
                 {/* Track progress across custom flows for your team. Find the right
                 balance for the user, privacy and security. */}
-                Perfect for law enforcement, enterprises, smart cities, and financial institutions.
+                Perfect for law enforcement, enterprises, smart cities.
               </p>
             </article>
-            <article>
-              <svg
-                className="mb-3 fill-indigo-500"
-                xmlns="http://www.w3.org/2000/svg"
-                width={24}
-                height={24}
-              >
-                <path d="M23.414 6 18 .586 16.586 2l3 3H7a6 6 0 0 0-6 6h2a4 4 0 0 1 4-4h12.586l-3 3L18 11.414 23.414 6Z" />
-                <path
-                  fillOpacity=".48"
-                  d="M13.01 12.508a2.5 2.5 0 0 0-3.502.482L1.797 23.16.203 21.952l7.71-10.17a4.5 4.5 0 1 1 7.172 5.437l-4.84 6.386-1.594-1.209 4.841-6.385a2.5 2.5 0 0 0-.482-3.503Z"
-                />
-              </svg>
-              <h3 className="mb-1 font-nacelle text-[1rem] font-semibold text-gray-200">
-                {/* Advanced Search */}
-                Deepfake Detection
-              </h3>
-              <p className="text-indigo-200/65">
-                {/* Track progress across custom flows for your team. Find the right
-                balance for the user, privacy and security. */}
-                Verify the authenticity of media content to combat misinformation and media manipulation.
-              </p>
-            </article>
+
             <article>
               <svg
                 className="mb-3 fill-indigo-500"
@@ -157,6 +133,7 @@ export default function Features() {
                 Access all security insights and alerts in one place, with customizable views for different user roles.
               </p>
             </article>
+
             <article>
               <svg
                 className="mb-3 fill-indigo-500"
@@ -180,6 +157,7 @@ export default function Features() {
                 From small businesses to large enterprises, Vigilance 360 scales to meet your security needs.
               </p>
             </article>
+
             <article>
               <svg
                 className="mb-3 fill-indigo-500"
@@ -203,6 +181,7 @@ export default function Features() {
                 Our AI models continuously improve with new data, ensuring your system stays ahead of emerging threats.
               </p>
             </article>
+
           </div>
         </div>
       </div>
