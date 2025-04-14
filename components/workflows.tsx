@@ -20,7 +20,7 @@ export default function Workflows() {
               Map Your Security Journey
             </h2>
             <p className="text-lg text-indigo-200/65">
-              Our intuitive interface allows you to seamlessly integrate Vigilance 360 into your existing systems, enabling real-time monitoring and threat detection within minutes.
+              Our intuitive interface allows you to seamlessly integrate Vigilance 360 into your existing systems, enabling monitoring and threat detection within minutes.
             </p>
           </div>
           {/* Spotlight items */}

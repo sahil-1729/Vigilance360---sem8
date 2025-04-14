@@ -21,7 +21,7 @@ export default function HeroHome() {
                 data-aos="fade-up"
                 data-aos-delay={200}
               >
-                Vigilance 360 combines real-time video analytics and ML to detect, prevent scams and suspicious activities—enhancing security in physical and digital spaces.
+                Vigilance 360 combines video analytics and ML to detect, prevent scams and suspicious activities—enhancing security in physical and digital spaces.
                 {/* Our landing page template works on all devices, so you only have
                 to set it up once, and get beautiful results forever. */}
               </p>

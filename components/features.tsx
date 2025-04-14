@@ -75,7 +75,7 @@ export default function Features() {
               </svg>
               <h3 className="mb-1 font-nacelle text-[1rem] font-semibold text-gray-200">
                 {/* Project Milestones */}
-                Real-Time Crime Detection
+                Real Crime Detection
               </h3>
               <p className="text-indigo-200/65">
                 {/* Track progress across custom flows for your team. Find the right
