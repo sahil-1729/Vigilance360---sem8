@@ -41,12 +41,14 @@ export default function SignIn() {
                   >
                     Password
                   </label>
-                  <Link
+
+                  {/* <Link
                     className="text-sm text-gray-600 hover:underline"
                     href="/reset-password"
                   >
                     Forgot?
-                  </Link>
+                  </Link> */}
+                
                 </div>
                 <input
                   id="password"
