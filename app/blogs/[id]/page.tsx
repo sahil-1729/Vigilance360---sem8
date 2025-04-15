@@ -14,22 +14,6 @@ export async function generateStaticParams() {
   }));
 }
 
-// Generate metadata for the page
-// export async function generateMetadata({ params }: { params: { id: string } }) {
-//   const post = await getNewsById(params.id);
-  
-//   if (!post) {
-//     return {
-//       title: 'Article Not Found - Vigilance360',
-//       description: 'The requested article could not be found.',
-//     };
-//   }
-  
-//   return {
-//     title: `${post.title} - Vigilance360`,
-//     description: post.description,
-//   };
-// }
 
 async function BlogPostContent({ id }: { id: string }) {
   const post = await getNewsById(id);
