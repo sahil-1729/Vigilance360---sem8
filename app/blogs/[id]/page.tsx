@@ -1,4 +1,4 @@
-import { Suspense } from 'react';
+import { Suspense, use } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getLatestCrimeNews, getNewsById } from '@/lib/blog-service';
@@ -22,8 +22,9 @@ export async function generateStaticParams() {
 }
 
 // Generate metadata for the page
-export async function generateMetadata({ params }: { params: { id: any } }) {
-  const post = await getNewsById(params.id);
+export async function generateMetadata({ params }: { params: Promise<{ id: string}> }) {
+  const {id} = await params;
+  const post = await getNewsById(id);
   
   if (!post) {
     return {
@@ -127,12 +128,14 @@ async function BlogPostContent({ id }: { id: string }) {
   );
 }
 
-export default function BlogPostPage({ params }: { params: { id: any } }) {
+export default function BlogPostPage({ params }: { params: Promise<{ id: string }> }) {
+  const {id} =  use(params);
+
   return (
     <div className="min-h-screen bg-slate-900 text-white">
       <main className="pt-8 pb-16">
         <Suspense fallback={<div className="flex justify-center py-20"><LoadingSpinner size="large" /></div>}>
-          <BlogPostContent id={params.id} />
+          <BlogPostContent id={id} />
         </Suspense>
       </main>
     </div>
