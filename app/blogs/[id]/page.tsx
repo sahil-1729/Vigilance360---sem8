@@ -127,7 +127,7 @@ async function BlogPostContent({ id }: { id: string }) {
   );
 }
 
-export default function BlogPostPage({ params }: { params: { id: string } }) {
+export default function BlogPostPage({ params }: { params: { id: any } }) {
   return (
     <div className="min-h-screen bg-slate-900 text-white">
       <main className="pt-8 pb-16">
