@@ -84,7 +84,8 @@ export default async function HomeBlogSection() {
                       <span>{formatDate(post.publishedAt)}</span>
                     </div>
                     <Link 
-                      href={`/blogs/${post.id}`} 
+                      href={`${post.source.url}`}
+                      target='_blank' 
                       className="text-indigo-400 hover:text-indigo-300 text-sm font-medium flex items-center"
                     >
                       Read More
