@@ -22,7 +22,7 @@ export async function generateStaticParams() {
 }
 
 // Generate metadata for the page
-export async function generateMetadata({ params }: { params: { id: string } }) {
+export async function generateMetadata({ params }: { params: { id: any } }) {
   const post = await getNewsById(params.id);
   
   if (!post) {
