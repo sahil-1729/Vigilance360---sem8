@@ -9,6 +9,7 @@
 - **Jest**: Testing framework for unit and integration tests.
 - **ESLint**: Linting tool to ensure code quality.
 - **Prettier**: Code formatter to maintain consistent code style.
+- **News API Integration**: Real-time crime news from around India.
 
 ## Getting Started
 
@@ -27,13 +28,23 @@ To get started with Vigilance 360, follow these steps:
    npm install
    ```
 
-3. **Start the development server:**
+3. **Set up environment variables:**
+
+   Create a `.env.local` file in the root directory with the following variables:
+   
+   ```
+   NEWS_API_KEY=your_newsapi_org_key_here
+   ```
+   
+   You can get a free API key from [News API](https://newsapi.org) by signing up for an account.
+
+4. **Start the development server:**
 
    ```sh
    npm start
    ```
 
-4. **Run tests:**
+5. **Run tests:**
    ```sh
    npm test
    ```

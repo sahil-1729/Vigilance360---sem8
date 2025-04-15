@@ -56,7 +56,6 @@ export default function RootLayout({
       >
         <Provider>
           <div className="flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
-            <Header />
             {children}
           </div>
         </Provider>

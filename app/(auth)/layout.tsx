@@ -1,5 +1,5 @@
 import PageIllustration from "@/components/page-illustration";
-
+import Header from "@/components/ui/header";
 export default function AuthLayout({
   children,
 }: {
@@ -8,7 +8,7 @@ export default function AuthLayout({
   return (
     <main className="relative flex grow flex-col">
       <PageIllustration multiple />
-
+      <Header />
       {children}
     </main>
   );
