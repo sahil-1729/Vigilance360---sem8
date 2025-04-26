@@ -29,7 +29,7 @@ export default function Header() {
           {session ? <ul className="flex flex-1 items-center justify-end gap-3">
             <Link
               onClick={() => signOut({
-                redirect: true,
+                redirect: false,
                 callbackUrl: `${window.location.origin}/`
               })}
               href="/signup"

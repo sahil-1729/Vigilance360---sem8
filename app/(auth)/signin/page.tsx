@@ -50,7 +50,7 @@ export default function SignIn() {
       }, 5000);
     } else {
       router.refresh()
-      router.push('/dashboard')
+      router.push('/blogs')
     }
 
 

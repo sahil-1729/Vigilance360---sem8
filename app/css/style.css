@@ -5,3 +5,257 @@
 @import "additional-styles/utility-patterns.css";
 @import "additional-styles/theme.css";
 @import "tailwindcss/utilities";
+
+/* Map Marker Styles */
+.marker {
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  border: 2px solid rgba(255,255,255,0.8);
+  transition: all 0.3s ease-in-out;
+}
+
+.marker:hover {
+  transform: scale(1.2) !important;
+}
+
+/* MapLibre GL Custom Styles */
+.maplibregl-popup {
+  max-width: 300px !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.maplibregl-popup-content {
+  padding: 0 !important;
+  border-radius: 8px !important;
+  background: rgba(30, 41, 59, 0.95) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px) !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+
+.maplibregl-popup-content h3 {
+  margin: 0 0 8px;
+  color: #60A5FA;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.maplibregl-popup-content p {
+  margin: 0;
+  color: rgba(255,255,255,0.8);
+  font-size: 0.875rem;
+}
+
+.maplibregl-popup-content p.timestamp {
+  margin-top: 4px;
+  color: rgba(255,255,255,0.5);
+  font-size: 0.75rem;
+}
+
+.maplibregl-popup-close-button {
+  color: #fff !important;
+  font-size: 16px !important;
+  padding: 4px 8px !important;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.maplibregl-popup-close-button:hover {
+  opacity: 1;
+  background: none !important;
+}
+
+/* Map Control Styles */
+.maplibregl-ctrl-group {
+  background: rgba(30, 41, 59, 0.95) !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  backdrop-filter: blur(8px);
+}
+
+.maplibregl-ctrl-group button {
+  color: #fff !important;
+}
+
+.maplibregl-ctrl-group button:hover {
+  background: rgba(255,255,255,0.1) !important;
+}
+
+/* Crime Point Animation */
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0.1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.2;
+  }
+}
+
+.crime-point {
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.crime-point:hover {
+  transform: scale(1.5) !important;
+}
+
+.crime-point::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, currentColor 0%, transparent 100%);
+  opacity: 0.2;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Heatmap Animation */
+@keyframes heatmap-fade {
+  0% { opacity: 0.6; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.6; }
+}
+
+.maplibregl-canvas {
+  animation: heatmap-fade 3s infinite ease-in-out;
+  transition: filter 0.3s ease;
+}
+
+/* Loading Animation */
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+
+/* Accessibility improvements */
+.crime-popup a:focus {
+  outline: 2px solid #60A5FA;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.maplibregl-ctrl button {
+  background-color: rgba(30, 41, 59, 0.9) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+.maplibregl-ctrl button:hover {
+  background-color: rgba(51, 65, 85, 0.9) !important;
+}
+
+.maplibregl-ctrl button:focus {
+  outline: 2px solid #60A5FA !important;
+  outline-offset: 2px !important;
+}
+
+/* Loading state */
+.map-loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(30, 41, 59, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+/* Cluster styles */
+.cluster-marker {
+  background: rgba(59, 130, 246, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.cluster-marker:hover {
+  transform: scale(1.1);
+  background: rgba(59, 130, 246, 1);
+}
+
+/* Map controls */
+.map-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.map-control-button {
+  background: rgba(30, 41, 59, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.map-control-button:hover {
+  background: rgba(51, 65, 85, 0.9);
+  transform: scale(1.05);
+}
+
+.map-control-button:active {
+  transform: scale(0.95);
+}
+
+.map-control-button[aria-pressed="true"] {
+  background: rgba(79, 70, 229, 0.9);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+  .crime-point:hover {
+    transform: none !important;
+  }
+  
+  .cluster-marker:hover {
+    transform: none;
+  }
+  
+  .map-control-button:hover {
+    transform: none;
+  }
+}

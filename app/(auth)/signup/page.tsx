@@ -55,17 +55,17 @@ export default function SignUp() {
     });
 
     const jsonResponse = await response.json();
-    console.log(jsonResponse)
+    console.log("sign up response ", jsonResponse)
 
     if (jsonResponse.user) {
       router.push('/signin');
     } else {
-      console.log(jsonResponse?.message)
+      console.log("Error ", jsonResponse?.error.name)
       setErrorM(jsonResponse?.message)
       setTimeout(() => {
         setErrorM('')
       }, 5000);
-      console.error('An error occurred');
+      console.error('Signup error occurred');
 
     }
 

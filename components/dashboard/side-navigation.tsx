@@ -10,8 +10,7 @@ import {
   BarChart2, 
   Calendar, 
   HelpCircle,
-  LogOut,
-  Shield
+  LogOut
 } from 'lucide-react';
 import { signOut } from 'next-auth/react';
 import Logo from '../ui/logo';
